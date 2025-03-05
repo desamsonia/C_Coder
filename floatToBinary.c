@@ -1,3 +1,9 @@
+/* float to binary conversion using union.
+we know that unions share the exact same memory location.
+when we assign a float value to (value.f=5.4), then the 4 bytes of the memory filled with the binary representation of the float according to the IEEE-754 format.
+accessing (value.i)(unsigned int i) simply interprets those exact same 4 bytes as an unsigned int. it doesn't perform any typecasting. it just reads the bits as if they were integer.
+*/
+
 #include <stdio.h>
 
 union FloatToBinary {
